@@ -21,6 +21,7 @@ imports:
     <a href="#_collections_abc">_collections_abc</a>
  &#8226;   <a href="#_weakrefset">_weakrefset</a>
  &#8226;   <a href="#abc">abc</a>
+ &#8226;   <a href="#analizador_sintactico">analizador_sintactico</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#collections.abc">collections.abc</a>
@@ -159,6 +160,7 @@ imports:
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#operator">operator</a>
  &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
  &#8226;   <a href="#posixpath">posixpath</a>
  &#8226;   <a href="#pyi_rth__tkinter.py">pyi_rth__tkinter.py</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
@@ -1029,6 +1031,23 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="analizador_sintactico"></a>
+  <a target="code" href="///C:/Users/Dj_va/OneDrive/Escritorio/Universidad/compiladores/analizador%20lexico%20flex/analizador_sintactico.py" type="text/plain"><tt>analizador_sintactico</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#lexer">lexer</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="argparse"></a>
   <a target="code" href="///C:/Users/Dj_va/AppData/Local/Programs/Python/Python312/Lib/argparse.py" type="text/plain"><tt>argparse</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -1205,6 +1224,17 @@ imported by:
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#zipfile">zipfile</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="cPickle"></a>
+  <a target="code" href="" type="text/plain"><tt>cPickle</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#ply.yacc">ply.yacc</a>
 
   </div>
 
@@ -5468,6 +5498,7 @@ imported by:
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#ply.lex">ply.lex</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
  &#8226;   <a href="#typing">typing</a>
 
@@ -5589,7 +5620,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#main.py">main.py</a>
+    <a href="#analizador_sintactico">analizador_sintactico</a>
+ &#8226;   <a href="#main.py">main.py</a>
 
   </div>
 
@@ -5785,6 +5817,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#os">os</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#tracemalloc">tracemalloc</a>
 
@@ -5976,6 +6009,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#logging">logging</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
  &#8226;   <a href="#tracemalloc">tracemalloc</a>
 
   </div>
@@ -5986,8 +6020,15 @@ imported by:
   <a name="ply"></a>
   <a target="code" href="///C:/Users/Dj_va/AppData/Local/Programs/Python/Python312/Lib/site-packages/ply/__init__.py" type="text/plain"><tt>ply</tt></a>
 <span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#ply">ply</a>
+
+  </div>
+  <div class="import">
 imported by:
-    <a href="#ply.lex">ply.lex</a>
+    <a href="#ply">ply</a>
+ &#8226;   <a href="#ply.lex">ply.lex</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
 
   </div>
 
@@ -6010,6 +6051,33 @@ imports:
   <div class="import">
 imported by:
     <a href="#lexer">lexer</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ply.yacc"></a>
+  <a target="code" href="///C:/Users/Dj_va/AppData/Local/Programs/Python/Python312/Lib/site-packages/ply/yacc.py" type="text/plain"><tt>ply.yacc</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#cPickle">cPickle</a>
+ &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#ntpath">ntpath</a>
+ &#8226;   <a href="#pickle">pickle</a>
+ &#8226;   <a href="#ply">ply</a>
+ &#8226;   <a href="#ply.lex">ply.lex</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#types">types</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#analizador_sintactico">analizador_sintactico</a>
+ &#8226;   <a href="#main.py">main.py</a>
 
   </div>
 
@@ -6222,6 +6290,7 @@ imported by:
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#ply.lex">ply.lex</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
  &#8226;   <a href="#posixpath">posixpath</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#re">re</a>
@@ -6711,6 +6780,7 @@ imported by:
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#ply.lex">ply.lex</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
  &#8226;   <a href="#posixpath">posixpath</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#py_compile">py_compile</a>
@@ -7058,6 +7128,7 @@ imported by:
  &#8226;   <a href="#main.py">main.py</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#ply.lex">ply.lex</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#tempfile">tempfile</a>
@@ -7189,6 +7260,7 @@ imported by:
  &#8226;   <a href="#main.py">main.py</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#ply.yacc">ply.yacc</a>
  &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#re._parser">re._parser</a>

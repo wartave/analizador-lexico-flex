@@ -14,7 +14,6 @@ def p_programa(p):
     '''
     programa : sentencias
     '''
-    # Manejar el programa como una lista de sentencias
     p[0] = p[1]
 
 def p_sentencias(p):
@@ -22,7 +21,6 @@ def p_sentencias(p):
     sentencias : sentencias sentencia
                | sentencia
     '''
-    # Si hay múltiples sentencias, agrégalas a una lista
     if len(p) == 3:
         p[0] = p[1] + [p[2]]
     else:
@@ -71,7 +69,6 @@ def p_expresion(p):
               | IDENTIFICADOR
               | CADENA
     '''
-    # Asignar el valor de la expresión al nodo padre
     if len(p) == 2:
         p[0] = p[1]
     elif len(p) == 4:
@@ -148,5 +145,4 @@ def p_error(p):
     else:
         print("Error de sintaxis en EOF")
 
-# Construir el parser
 parser = yacc.yacc()
