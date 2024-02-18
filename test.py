@@ -1,6 +1,8 @@
 -@Comentario multilinea @-
 #comentario una sola linea x=0
 
+versa test = 0;
+
 funcion suma(a, b) {
     retorno a + b;
 }
