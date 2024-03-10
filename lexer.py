@@ -1,3 +1,4 @@
+#lexer.py
 import ply.lex as lex
 
 # Definiciones de tokens para el analizador léxico
@@ -33,7 +34,11 @@ tokens = (
     'IGUAL_QUE',
     'PUNTO_Y_COMA',
     'VERSA',
-    'FUNCION'
+    'FUNCION',
+    'AND',
+    'OR',
+    'TRUE',
+    'FALSE'
 )
 
 # Reglas para tokens
@@ -54,6 +59,10 @@ t_MAYOR_IGUAL_QUE    = r'>='
 t_DISTINTO_QUE       = r'!='
 t_IGUAL_QUE          = r'=='
 t_PUNTO_Y_COMA       = r';'
+t_AND                = r'y'
+t_OR                 = r'o'
+t_TRUE               = r'true'
+t_FALSE              = r'false'
 
 # Regla para números
 def t_NUMERO(t):
