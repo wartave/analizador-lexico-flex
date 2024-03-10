@@ -42,12 +42,31 @@ def recorrer_arbol(nodo, errores_semanticos, funcion_actual):
             if len(nodo) == 5:
                 recorrer_arbol(nodo[4], errores_semanticos, funcion_actual)
         elif nodo[0] == 'while':
-            resultado_condicion = evaluar_expresion(nodo[1], variables_declaradas)
-            if resultado_condicion is None:
+            condiciones = nodo[1]
+            if isinstance(condiciones, tuple):
+                operador_logico = condiciones[0]
+                if operador_logico not in ['&&', '||']:
+                    resultado_condicion = evaluar_expresion(condiciones, variables_declaradas)
+                    if resultado_condicion is None:
+                        errores_semanticos.append("Error: La expresión en la condición del bucle 'mientras' no es válida.")
+                    elif not isinstance(resultado_condicion, bool):
+                        errores_semanticos.append("Error: La expresión en la condición del bucle 'mientras' debe ser de tipo booleano.")
+                else:
+                    exp_izquierda = condiciones[1]
+                    exp_derecha = condiciones[2]
+                    resultado_izquierda = evaluar_expresion(exp_izquierda, variables_declaradas)
+                    resultado_derecha = evaluar_expresion(exp_derecha, variables_declaradas)
+                    if resultado_izquierda is None or resultado_derecha is None:
+                        errores_semanticos.append("Error: La expresión en la condición del bucle 'mientras' no es válida.")
+                    elif not (isinstance(resultado_izquierda, bool) and isinstance(resultado_derecha, bool)):
+                        errores_semanticos.append("Error: Las expresiones en la condición del bucle 'mientras' deben ser de tipo booleano.")
+            elif isinstance(condiciones, bool):  # Manejar el caso de una expresión booleana simple
+                resultado_condicion = condiciones
+            else:
                 errores_semanticos.append("Error: La expresión en la condición del bucle 'mientras' no es válida.")
-            elif not isinstance(resultado_condicion, bool):
-                errores_semanticos.append("Error: La expresión en la condición del bucle 'mientras' debe ser de tipo booleano.")
+                return
             recorrer_arbol(nodo[2], errores_semanticos, funcion_actual)
+
         elif nodo[0] == 'for':
             recorrer_arbol(nodo[2], errores_semanticos, funcion_actual)
             recorrer_arbol(nodo[4], errores_semanticos, funcion_actual)
@@ -120,6 +139,11 @@ def evaluar_expresion(expresion, variables_declaradas):
                 return izquierda and derecha
             elif operador == 'or':
                 return izquierda or derecha
+        elif operador == 'not':
+            valor = evaluar_expresion(expresion[1], variables_declaradas)
+            if valor is None:
+                return None
+            return not valor
         else:
             return None  # Expresión no válida
     elif isinstance(expresion, str):

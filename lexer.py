@@ -79,7 +79,9 @@ palabras_reservadas = {
     'romper': 'BREAK',
     'retorno': 'RETORNO',
     'funcion': 'FUNCION',
-    'versa': 'VERSA'  
+    'versa': 'VERSA',
+    'true': 'TRUE',  
+    'false': 'FALSE'  
 }
 # Convertir lexemas a minúsculas antes de clasificar
 def t_IDENTIFICADOR(t):

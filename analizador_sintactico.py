@@ -99,7 +99,12 @@ def p_expresion(p):
               | llamada_funcion
     '''
     if len(p) == 2:
-        p[0] = p[1]
+        if p[1] == 'true':
+            p[0] = ('booleano', True)
+        elif p[1] == 'false':
+            p[0] = ('booleano', False)
+        else:
+            p[0] = p[1]
     elif len(p) == 4:
         if p[1] == '(':
             p[0] = p[2]

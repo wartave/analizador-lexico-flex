@@ -21,6 +21,10 @@
   ('_threading_local',
    'C:\\Users\\Dj_va\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\_threading_local.py',
    'PYMODULE'),
+  ('analizador_semantico',
+   'C:\\Users\\Dj_va\\OneDrive\\Escritorio\\Universidad\\compiladores\\analizador '
+   'lexico flex\\analizador_semantico.py',
+   'PYMODULE'),
   ('analizador_sintactico',
    'C:\\Users\\Dj_va\\OneDrive\\Escritorio\\Universidad\\compiladores\\analizador '
    'lexico flex\\analizador_sintactico.py',
